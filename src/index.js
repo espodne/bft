@@ -7,3 +7,9 @@ CheckboxList("categories", CATEGORIES_COUNT);
 document.addEventListener("DOMContentLoaded", () => {
   handleForm();
 });
+
+function cleanupEventListeners() {
+  document.removeEventListener("DOMContentLoaded", () => {
+    handleForm();
+  });
+}
